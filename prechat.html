@@ -13,6 +13,16 @@
 	}
 </style>
 
+<style type='text/css'>
+	.embeddedServiceHelpButton .helpButton .uiButton {
+		background-color: #005290;
+		font-family: "Arial", sans-serif;
+	}
+	.embeddedServiceHelpButton .helpButton .uiButton:focus {
+		outline: 1px solid #005290;
+	}
+</style>
+
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -34,6 +44,10 @@
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
+embedded_svc.settings.extraPrechatInfo = 
+[{"entityName":"Contact","showOnCreate":true,"linkToEntityName":"Case","linkToEntityField":"ContactId","saveToTranscript":"Contact","entityFieldMaps":[{"isExactMatch":true,"fieldName":"FirstName","doCreate":false,"doFind":true,"label":"First Name"},{"isExactMatch":true,"fieldName":"LastName","doCreate":false,"doFind":true,"label":"Last Name"},{"isExactMatch":true,"fieldName":"Email","doCreate":true,"doFind":false,"label":"Email"},{"isExactMatch":true,"fieldName":"MobileOptOut__c","doCreate":true,"doFind":false,"label":"Mobile Opt Out"}]},{"entityName":"Case","showOnCreate":true, "saveToTranscript":"Case", "entityFieldMaps":[{"isExactMatch":false,"fieldName":"Subject","doCreate":true,"doFind":false,"label":"issue"},{"isExactMatch":false,"fieldName":"Status","doCreate":true,"doFind":false,"label":"Status"}]}]
+
+
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
@@ -44,10 +58,10 @@
 			'00Dp0000000Dbr1',
 			'Test',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c1cs-hnd.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-ukb.salesforceliveagent.com/content',
 				deploymentId: '5727F000000LmDd',
 				buttonId: '5737F000000LdxY',
-				baseLiveAgentURL: 'https://d.la1-c1cs-hnd.salesforceliveagent.com/chat',
+				baseLiveAgentURL: 'https://d.la1-c1cs-ukb.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04Ip00000004CJcEAM_177529a57f4',
 				isOfflineSupportEnabled: false
 			}
