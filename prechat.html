@@ -45,7 +45,7 @@
 		   }
 		] ; 
 
-embedded_svc.settings.extraPrechatInfo = [
+/*embedded_svc.settings.extraPrechatInfo = [
    {
       "entityName":"Contact",
       "showOnCreate":true,
@@ -97,7 +97,7 @@ embedded_svc.settings.extraPrechatInfo = [
          }
       ]
    }
-];
+];*/
 		embedded_svc.init(
 			'https://ecu--Dev.my.salesforce.com',
 			'https://dev-ecu.cs31.force.com/C1',
@@ -114,7 +114,7 @@ embedded_svc.settings.extraPrechatInfo = [
 			}
 		);
 		
-		document.addEventListener(
+		/*document.addEventListener(
 			"setCustomField",
 			function(event) {
 				embedded_svc.settings.extraPrechatFormDetails[0].value = event.detail.customField;
@@ -122,7 +122,7 @@ embedded_svc.settings.extraPrechatInfo = [
 				event.detail.callback();
 			},
 			false
-		);
+		);*/
 	};
 
 	if (!window.embedded_svc) {
