@@ -45,7 +45,80 @@
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
 embedded_svc.settings.extraPrechatInfo = 
-[{"entityName":"Contact","showOnCreate":true,"linkToEntityName":"Case","linkToEntityField":"ContactId","saveToTranscript":"Contact","entityFieldMaps":[{"isExactMatch":true,"fieldName":"FirstName","doCreate":false,"doFind":true,"label":"First Name"},{"isExactMatch":true,"fieldName":"LastName","doCreate":false,"doFind":true,"label":"Last Name"},{"isExactMatch":true,"fieldName":"Email","doCreate":true,"doFind":false,"label":"Email"},{"isExactMatch":true,"fieldName":"MobileOptOut__c","doCreate":true,"doFind":false,"label":"Mobile Opt Out"}]},{"entityName":"Case","showOnCreate":true, "saveToTranscript":"Case", "entityFieldMaps":[{"isExactMatch":false,"fieldName":"Subject","doCreate":true,"doFind":false,"label":"issue"},{"isExactMatch":false,"fieldName":"Status","doCreate":true,"doFind":false,"label":"Status"}]}]
+[
+   {
+      "entityName":"Contact",
+      "showOnCreate":true,
+      "linkToEntityName":"Case",
+      "linkToEntityField":"ContactId",
+      "saveToTranscript":"Contact",
+      "entityFieldMaps":[
+         {
+            "isExactMatch":true,
+            "fieldName":"FirstName",
+            "doCreate":false,
+            "doFind":true,
+            "label":"First Name"
+         },
+         {
+            "isExactMatch":true,
+            "fieldName":"LastName",
+            "doCreate":false,
+            "doFind":true,
+            "label":"Last Name"
+         },
+         {
+            "isExactMatch":true,
+            "fieldName":"Email",
+            "doCreate":true,
+            "doFind":false,
+            "label":"Email"
+         },
+         {
+            "isExactMatch":false,
+            "fieldName":"MobileOptOut__c",
+            "doCreate":true,
+            "doFind":false,
+            "label":"Mobile Opt Out"
+         },
+		 {
+            "isExactMatch":false,
+            "fieldName":"HasOptedOutOfEmail",
+            "doCreate":true,
+            "doFind":false,
+            "label":"Email Opt Out"
+         },
+		 {
+            "isExactMatch":false,
+            "fieldName":"HasOptedOutOfPhone__c",
+            "doCreate":true,
+            "doFind":false,
+            "label":"Phone Opt Out"
+         }
+      ]
+   },
+   {
+      "entityName":"Case",
+      "showOnCreate":true,
+      "saveToTranscript":"Case",
+      "entityFieldMaps":[
+         {
+            "isExactMatch":false,
+            "fieldName":"Subject",
+            "doCreate":true,
+            "doFind":false,
+            "label":"issue"
+         },
+         {
+            "isExactMatch":false,
+            "fieldName":"Status",
+            "doCreate":true,
+            "doFind":false,
+            "label":"Status"
+         }
+      ]
+   }
+];
 
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
