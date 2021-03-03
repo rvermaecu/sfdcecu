@@ -13,16 +13,6 @@
 	}
 </style>
 
-<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		background-color: #005290;
-		font-family: "Arial", sans-serif;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #005290;
-	}
-</style>
-
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -44,7 +34,9 @@
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
-embedded_svc.settings.extraPrechatInfo = 
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+		embedded_svc.settings.extraPrechatInfo = 
 [
    {
       "entityName":"Contact",
@@ -119,11 +111,6 @@ embedded_svc.settings.extraPrechatInfo =
       ]
    }
 ];
-
-
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-		embedded_svc.settings.entryFeature = 'LiveAgent';
-
 		embedded_svc.init(
 			'https://ecu--Dev.my.salesforce.com',
 			'https://dev-ecu.cs31.force.com/C1',
@@ -152,6 +139,5 @@ embedded_svc.settings.extraPrechatInfo =
 		initESW('https://service.force.com');
 	}
 </script>
-
 </body>
 </html>
